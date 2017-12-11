@@ -119,15 +119,12 @@
           <a class="mdl-navigation__link" href="change_mm.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">edit</i>更改密码</a>
         </nav>
       </div>
-      <main class="mdl-layout__content mdl-color--grey-100">
+       <main class="mdl-layout__content mdl-color--grey-100">
         <div id="login-page" class="row" style="width:35%;">
       <div class="col s12 z-depth-6 card-panel">
         <form class="login-form">
-          <div class="row">
-            <div class="input-field col s12 center">
-             <!--  <img src="http://w3lessons.info/logo.png" alt="" class="responsive-img valign profile-image-login"> -->
-             <!--  <p class="center login-form-text" style="padding-top:20px;">请注册你的个人信息</p> -->
-            </div>
+          <div class="collection">
+          <a href="#!" class="collection-item"><span></span>公司信息</a>
           </div>
           <div class="row margin">
             <div class="input-field col s12">
@@ -240,15 +237,37 @@
               <label for="password-again">附件1 上传扫描件 营业执照 组织机构代码证 税务登记证 银行开户许可证</label>
             </div>
           </div> -->
+          <div class="collection">
+          <a href="#!" class="collection-item"><span></span>附件信息1</a>
+          </div>
            <div class="file-field input-field">
             <div class="btn">
-              <span>附件1(上传扫描件)</span>
+              <span>统一社会信用代码</span>
               <input type="file">
             </div>
             <div class="file-path-wrapper">
               <input type="text" class="file-path validate">
             </div>
           </div>
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>营业执照</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input type="text" class="file-path validate">
+            </div>
+          </div>
+           <div class="file-field input-field">
+            <div class="btn">
+              <span>银行开户许可证</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input type="text" class="file-path validate">
+            </div>
+          </div>
+          
          <!--  <div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">clear_all</i>
@@ -270,14 +289,20 @@
               <div class="collapaible-body"><p>Lorem ipsum dolor sit amet</p></div>
             </li>
           </ul> -->
+          <div class="collection">
+          <a href="#!" class="collection-item"><span></span>附件信息2</a>
+          </div>
           <div class="file-field input-field">
             <div class="btn">
-              <span>上传营业执照</span>
+              <span>其它附件上传</span>
               <input type="file">
             </div>
             <div class="file-path-wrapper">
               <input type="text" class="file-path validate">
             </div>
+          </div>
+          <div class="collection">
+          <a href="#!" class="collection-item"><span></span>客户信息</a>
           </div>
           <div class="row margin">
             <div class="input-field col s12">
@@ -321,7 +346,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <a href="register.html" class="btn waves-effect waves-light col s12">立刻注册</a>
+              <a href="register.html" id="clik_qd" class="btn waves-effect waves-light col s12">确定</a>
             </div>
             <div class="input-field col s12">
             <!--   <p class="margin center medium-small sign-up">已经有了账号? <a href="index.html">登录</a></p> -->
@@ -387,6 +412,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 
     <script >
+   !function(window,document,$,undefined){
+
+  var init = function(){
+    bindevent()
+  };
+
+  var bindevent = function(){
+    $("#clik_qd").on('click',onnewbtnclick);
+  }
+  // var donwfocus=function(){
+  //   $('#username,#email,#password,.password_again').focus(donwtxt);
+  // }
+  
+    var onnewbtnclick = function(){
+      var name=$('#username').val();
+      $.ajax({
+        type:"post",
+        dataType: "JSON",
+        url:"/supplierUserController/register",
+        Content-Type:"application/json"
+        data:{
+          supplier_user_name:name
+        },
+        success:function(data){
+            console.log(data)
+        } 
+      })
+
+    }
+     
+
+
+
+    $(document).ready(init);
+
+}(window,document,jQuery);
+   
+
+
+
+
+
+
+
+
+
+
     // $( document ).ready(function(){
     	// $.ajax({
     	// 	url: "http://192.168.88.39:8080/supplierUserController/showUserToJsonByName/sun",

@@ -61,7 +61,7 @@
                         $('#usertiger').text('用户已存在')
                       }
 
-                     if(data.phone_exist == false){}
+                     if(data.phone_exist == false){
 
                         $('#phonetiger').text('手机号已存在')
                     }
