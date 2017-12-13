@@ -389,236 +389,111 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 
     <script>
-    //      $('#clik_qd').on('click',function(){
-    //         var username = $('#username').val()
-    //          setCookie('result',str,365);
-    //         if(username.length<8){
-    //           $('#usertiger').text('公司名不能少于8位')
-    //           alert('123')
-    //         }else{
-    //            $('#usertiger').text('')
-    //         }
-    //         document.cookie = 'value' + username +';expires' + (1 * 3600 * 1000);
-    //         getVal();
-    //      })
+  
  
-    //          $('#clik_qd').on('click',function(){
-    //         if(checkCookie()){
-    //             var str = getCookie('result');
-    //             var arr = str.split(',');
-                 
-    //             document.getElementById('t1').innerHTML = arr[0];
-    //             document.getElementById('t2').innerHTML = arr[1];
-    //         }
-    //     })
-    // function getVal(){
-    //     $('#div').html(document.cookie.split(';')[0].split('=')[1]);
-    // }
-    // getVal();
-    //        function setCookie(c_name,value,expiredays){
-    //         var exdate=new Date();
-    //         exdate.setDate(exdate.getDate()+expiredays);
-    //         document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
-    //     }
-
-    //     function getCookie(c_name){
-    //         if(document.cookie.length>0){
-    //             c_start=document.cookie.indexOf(c_name + "=");
-    //               if(c_start!=-1){ 
-    //                 c_start=c_start + c_name.length+1;
-    //                 c_end=document.cookie.indexOf(";",c_start);
-    //             if(c_end==-1) c_end=document.cookie.length;
-    //                 return unescape(document.cookie.substring(c_start,c_end));
-    //             } 
-    //           }
-    //         return "";
-    //     }
-        
-    //     function checkCookie(){
-    //         var username=getCookie('result')
-    //         if(username!=null && username!=""){
-    //           return true;
-    //         }
-    //         else{
-    //             return false;
-    //         }
-    //     }
-
-
-     
-
-// 重要看下
- // $(function () {
- //            if ($.cookie("user")) {
- //                $("#username").val($.cookie("user"));
- //            };
-
- //            $("#btn").click(function () {
- //                $.cookie("user", $("#username").val(), { expires: 7 });
- //            });
-          
- //        });
-
-    
-    	// $deta{
-    	// 	supplierUserName:$('#username').val()
-    	// }
-// }
-
-
-    	$.ajax({
-    		url: "http://192.168.88.35:8088/supplierUserController/showUserToJsonByName/sun",
-    		type: "GET",
-    		dataType: 'JSON',
+    $.get("http://192.168.88.35:8088/supplierUserController/showUserToJsonByName/sun",function(result){
+         $.each(result, function(i, field){
+          if(i == "companyName"){
+            $("#username").val(field);
+            $("#username").focus()
+          }
+          if(i == "organizeCode"){
+             $("#user_jg").val(field)
+             $("#user_jg").focus()
+          }
+          if(i == "taxCode"){
+            $('#user_sw').val(field)
+            $('#user_sw').focus()
+          }
+          if(i == "companyNature"){
+            $('#user_conplay').val(field)
+            $('#user_conplay').focus()
+          }
+          if(i == "city"){
+             $("#user_adrees").val(field)
+             $("#user_adrees").focus()
+          }
+          if(i == "street"){
+            $("#user_conname").val(field)
+            $("#user_conname").focus()
+          }
+          if(i == "corporateRepresentative"){
+            $("#people_db").val()
+            $("#people_db").focus()
+          }
+          if(i == "registeredCapital"){
+            $('#zc_money').val(field)
+            $('#zc_money').focus()
+          }
+          if(i == "establishDate"){
+            $('#again_data').val(field)
+            $('#again_data').focus()
+          }
+          if(i == "expiryDate"){
+            $('#qx_data').val(field)
+            $('#qx_data').focus()
+          }
+          if(i == "businessScope"){
+            $('#jy_fw').val(field)
+            $('#jy_fw').focus()
+          }
+          if(i == "bank"){
+            $('#kh_bank').val(field)
+            $('#kh_bank').focus()
+          }
+          if(i == "account"){
+            $('#bank_naber').val(field)
+            $('#bank_naber').focus()
+          }
+          if(i == "serviceType"){
+            $('#fw_kind').val(field)
+            $('#fw_kind').focus()
+          }
+          if(i == "contactName"){
+            $('#people_name').val(field)
+            $('#people_name').focus()
+          }
+          if(i == "email"){
+            $('#cy_email').val(field)
+            $('#cy_email').focus()
+          }
+          if(i == "commonMobile"){
+            $('#cy_phone').val(field)
+            $('#cy_phone').focus()
+          }
+        });
+    })
+  
+    $('#clik_qd').on('click',function(){
+      $.ajax({
+        url: "http://192.168.88.35:8088/supplierUserController/showUserToJsonByName/sun",
+        type: "GET",
+        dataType: 'JSON',
         data:{
-         companyName:$("#username").value
-         organizeCode:$("#user_jg").value
-         companyNature:$("#user_sw").value
-         city:$("#user_conplay").value
-         street: $("#user_adrees").value
-         corporateRepresentative:$("#user_conname").value
-         registeredCapital:$('#zc_money').value
-         establishDate:$('#again_data').value
-         expiryDate:$('#qx_data').value
-         businessScope:$('#jy_fw').value
-         bank:$('#kh_bank').value
-         account:$('#bank_naber').value
-         serviceType:$('#fw_kind').value
-         contactName:$('#people_name').value
-         email:$('#cy_email').value
-         commonMobile:$('#cy_phone').value
+         companyName:$("#username").val(),
+         organizeCode:$("#user_jg").val(),
+         taxCode:$("#user_sw").val(),
+         companyNature:$("#user_conplay").val(),
+         city: $("#user_adrees").val(),
+         street:$("#user_conname").val(),
+         registeredCapital:$('#zc_money').val(),
+         establishDate:$('#again_data').val(),
+         expiryDate:$('#qx_data').val(),
+         businessScope:$('#jy_fw').val(),
+         bank:$('#kh_bank').val(),
+         account:$('#bank_naber').val(),
+         serviceType:$('#fw_kind').val(),
+         contactName:$('#people_name').val(),
+         email:$('#cy_email').val(),
+         commonMobile:$('#cy_phone').val()
         }
-    		success: function(result){
-    			$.each(result, function(i, field){
-    			if (i == "supplierUserName") {
-    				$("#username").text(field);
-    			}
-          if(i == "organizeCode"){
-             $("#user_jg").text(field)
-          }
-          if(i == "companyNature"){
-            $('#user_sw').text(field)
-          }
-          if(i == "city"){
-            $('#user_conplay').text(field)
-          }
-          if(i == "street"){
-             $("#user_adrees").text(field)
-          }
-          if(i == "corporateRepresentative"){
-            $("#user_conname").text(field)
-          }
-          if(i == "registeredCapital"){
-            $('#zc_money').text(field)
-          }
-          if(i == "establishDate"){
-            $('#again_data').text(field)
-          }
-          if(i == "expiryDate"){
-            $('#qx_data').text(field)
-          }
-          if(i == "businessScope"){
-            $('#jy_fw').text(field)
-          }
-          if(i == "bank"){
-            $('#kh_bank').text(field)
-          }
-          if(i == "account"){
-            $('#bank_naber').text(field)
-          }
-          if(i == "serviceType"){
-            $('#fw_kind').text(field)
-          }
-          if(i == "contactName"){
-            $('#people_name').text(field)
-          }
-          if(i == "email"){
-            $('#cy_email').text(field)
-          }
-          if(i == "commonMobile"){
-            $('#cy_phone').text(field)
-          }
-    		});
-    		},
-    		error:function(result){
-    			$.each(result, function(i, field){
-    			if (i == "supplierUserName") {
-            $("#username").text(field);
-          }
-          if(i == "organizeCode"){
-             $("#user_jg").text(field)
-          }
-          if(i == "companyNature"){
-            $('#user_sw').text(field)
-          }
-          if(i == "city"){
-            $('#user_conplay').text(field)
-          }
-          if(i == "street"){
-             $("#user_adrees").text(field)
-          }
-          if(i == "corporateRepresentative"){
-            $("#user_conname").text(field)
-          }
-          if(i == "registeredCapital"){
-            $('#zc_money').text(field)
-          }
-          if(i == "establishDate"){
-            $('#again_data').text(field)
-          }
-          if(i == "expiryDate"){
-            $('#qx_data').text(field)
-          }
-          if(i == "businessScope"){
-            $('#jy_fw').text(field)
-          }
-          if(i == "bank"){
-            $('#kh_bank').text(field)
-          }
-          if(i == "account"){
-            $('#bank_naber').text(field)
-          }
-          if(i == "serviceType"){
-            $('#fw_kind').text(field)
-          }
-          if(i == "contactName"){
-            $('#people_name').text(field)
-          }
-          if(i == "email"){
-            $('#cy_email').text(field)
-          }
-          if(i == "commonMobile"){
-            $('#cy_phone').text(field)
-          }
-    	});
-    		}
 })
-    		    // 	$.getJSON("http://192.168.88.42:8080/supplierUserController/showUserToJsonByName/sun",function(result){
-    // 		$.each(result, function(i, field){
-    // 			if (i == "supplierUserName") {
-    // 				$("#usename").text(field);
-    // 			}
-    // 		});
-    // 	});
-   
+
+
+
+    })
+    	
 
     </script>
-
-	<!-- <div style="margin-left: 30px; margin-top: 30px">
-    <form action="">
-      {% csrf_token %}
-    <h3>用户注册</h3>
-    <p>用户名：<input type="text" name="userName"></p>
-    <p>密码：<input type="password" name="password"></p>
-    <p>邮箱：<input type="text" name="email"></p>
-      <input id="avatar" type="text" value="/static/images/sample.png" name="avatar" style="width: 400px"> {# 实际应用中要将该input标签隐藏，display:none; #}
-      <p><input type="submit" value="注册"></p>
-      </form>
-    <div style="position: absolute; top: 85px; left: 300px;">
-    <input id="avatarSlect" type="file" style="position: absolute;float: left; z-index: 10; opacity: 0;width: 100px; height: 100px;">
-    <img id="avatarPreview" src="/static/images/sample.png" title="点击更换图片" style="position: absolute; z-index: 9; float: left; width: 100px; height: 100px">
-      </div>
-  </div> -->
-
   </body>
 </html>
