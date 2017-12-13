@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <link rel="stylesheet" href="htgl.css">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     #view-source {
       position: fixed;
@@ -112,48 +115,116 @@
           </div>
         </div>
       </div>
+     
+  <!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
         <div id="login-page" class="row">
-          
-     <table id="tb_tebles" class="bordered striped highlight centered" style="background-color:#fff;">
+          <!-- On rows -->
+<table class="table table-condensed table-responsive">
+ 
+<!-- <th>
+  <td class="active">商品</td>
+  <td class="success">商品</td>
+  <td class="warning">商品</td>
+  <td class="danger">商品</td>
+  <td class="info">商品</td>
+</th> -->
+
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <th class="active">商品</th>
+  <th class="success">商品</th>
+  <th class="warning">商品</th>
+  <th class="danger">商品</th>
+  <th class="info">商品</th>
+</tr>
+<tr>
+  <td class="active">商品</td>
+  <td class="success">商品</td>
+  <td class="warning">商品</td>
+  <td class="danger">商品</td>
+  <td class="info">商品</td>
+</tr>
+<tr>
+  <td class="active">商品</td>
+  <td class="success">商品</td>
+  <td class="warning">商品</td>
+  <td class="danger">商品</td>
+  <td class="info">商品</td>
+</tr>
+<tr>
+  <td class="active">商品</td>
+  <td class="success">商品</td>
+  <td class="warning">商品</td>
+  <td class="danger">商品</td>
+  <td class="info">商品</td>
+</tr>
+</table>
+    <!--  <table id="tb_tebles" class="bordered striped highlight centered" style="background-color:#fff;">
       <thead>
           <tr><th>&nbsp;</th>
               <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
-              <th>描述</th>
-              <th>操作</th>
+              <th>产品名称</th>
+              <th>规格</th>
+              <th>型号</th>
+              <th>计量单位</th>
+              <th>可供数量</th>
+              <th>单价(元)</th>
+              <th>是否审核</th>
+              <th>详细展示</th>
           </tr>
         </thead>
          <tbody>
     <tr>
       <td><i class="material-icons">add</i></td>
       <td><p>
-      <input type="checkbox" id="test5" />
+      <input type="checkbox"/>
       <label for="test5">Red</label>
-    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
+    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
 
     <tr>
       <td><i class="material-icons">add</i></td>
       <td><p>
-      <input type="checkbox" id="test5" />
+      <input type="checkbox"/>
       <label for="test5">Red</label>
-    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
+    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
 
     <tr>
       <td><i class="material-icons">add</i></td>
       <td><p>
-      <input type="checkbox" id="test5" />
+      <input type="checkbox"/>
       <label for="test5">Red</label>
-    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
+    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
 
     <tr>
       <td><i class="material-icons">add</i></td>
       <td><p>
-      <input type="checkbox" id="test5" />
+      <input type="checkbox"/>
       <label for="test5">Red</label>
-    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
+    </p></td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td>可供商品</td><td><i class="material-icons">border_color</i>&nbsp;&nbsp;<i class="material-icons">clear</i></td></tr>
     </tbody>
-</table>
+</table> -->
       <ul class="pagination" style="float:right;">
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <li class="active"><a href="#!">1</a></li>
@@ -220,12 +291,9 @@
   
     <!--materialize js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
-
-    <script >
-   
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+     
     </script>
-
-	
-
   </body>
 </html>

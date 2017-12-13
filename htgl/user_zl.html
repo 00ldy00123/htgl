@@ -65,6 +65,9 @@
     #z_bar{
       width: 19%;
     }
+    /*.usertiger{
+      display: none;
+    }*/
     </style>
   </head>
   <body>
@@ -129,21 +132,22 @@
           <div class="row margin">
             <div class="input-field col s12">
               <i class="mdi-social-person-outline prefix"></i>
-              <input id="username" type="text" class="validate">
+              <input id="username" name="username" type="text">
               <label for="username" class="center-align" id="usename">公司名称</label>
+              <b id="usertiger"></b>
             </div>
           </div>
           <div class="row margin">
             <div class="input-field col s12">
               <i class="mdi-communication-email prefix"></i>
-              <input id="email" type="email" class="validate">
+              <input id="user_jg" name="username" type="text">
               <label for="email" class="center-align">组织机构代码</label>
             </div>
           </div>
           <div class="row margin">
             <div class="input-field col s12">
               <i class="mdi-action-lock-outline prefix"></i>
-              <input id="password" type="password" class="validate">
+              <input id="user_sw" name="username" type="text" class="validate">
               <label for="password">税务登记证号</label>
             </div>
           </div>
@@ -151,7 +155,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">border_color</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="user_conplay" name="username" type="text">
               <label for="password-again">公司性质</label>
             </div>
           </div>
@@ -159,7 +163,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">location_on</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="user_adrees" name="username" type="text">
               <label for="password-again">公司所在地</label>
             </div>
           </div>
@@ -167,7 +171,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">domain</i>
              <!--  <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="user_conname" name="username" type="text">
               <label for="password-again">公司住所</label>
             </div>
           </div>
@@ -175,7 +179,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">people_outline</i>
              <!--  <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="people_db" name="username" type="text">
               <label for="password-again">法人代表</label>
             </div>
           </div>
@@ -183,35 +187,35 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">attach_money</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="zc_money" name="username" type="text">
               <label for="password-again">注册资金</label>
             </div>
           </div><div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">today</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="again_data" name="username" type="text">
               <label for="password-again">成立日期</label>
             </div>
           </div><div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">query_builder</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="qx_data" name="username" type="text">
               <label for="password-again">营业期限</label>
             </div>
           </div><div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">view_carousel</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="jy_fw" name="username" type="text">
               <label for="password-again">经营范围</label>
             </div>
           </div><div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">local_convenience_store</i>
              <!--  <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="kh_bank" name="username" type="text">
               <label for="password-again">开户银行</label>
             </div>
           </div>
@@ -219,24 +223,17 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">iso</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="bank_naber" name="username" type="text">
               <label for="password-again">银行账号</label>
             </div>
           </div><div class="row margin">
             <div class="input-field col s12">
               <i class="material-icons prefix">confirmation_number</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="fw_kind" name="username" type="text">
               <label for="password-again">服务类型</label>
             </div>
           </div>
-         <!--  <div class="row margin">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">present_to_all</i>
-              <input id="password-again" type="password">
-              <label for="password-again">附件1 上传扫描件 营业执照 组织机构代码证 税务登记证 银行开户许可证</label>
-            </div>
-          </div> -->
           <div class="collection">
           <a href="#!" class="collection-item"><span></span>附件信息1</a>
           </div>
@@ -268,27 +265,6 @@
             </div>
           </div>
           
-         <!--  <div class="row margin">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">clear_all</i>
-              <input id="password-again" type="password">
-              <label for="password-again">附件信息2 其他资质扫描件:(非必输项)</label>
-            </div>
-          </div> -->
-         <!--  <ul class="collapsible" data-collapsible="accordion">
-            <li>
-              <div class="collapaible-header"><i class="material-icons">filter _drama</i></div>
-              <div class="collapaible-body"><p>Lorem ipsum dolor sit amet</p></div>
-            </li>
-            <li>
-              <div class="collapaible-header"><i class="material-icons">place</i>Second</div>
-              <div class="collapaible-body"><p>Lorem ipsum dolor sit amet</p></div>
-            </li>
-            <li>
-              <div class="collapaible-header"><i class="material-icons">whatshot</i>Third</div>
-              <div class="collapaible-body"><p>Lorem ipsum dolor sit amet</p></div>
-            </li>
-          </ul> -->
           <div class="collection">
           <a href="#!" class="collection-item"><span></span>附件信息2</a>
           </div>
@@ -308,7 +284,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">contacts</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="people_name" name="username" type="text">
               <label for="password-again">联系人姓名</label>
             </div>
           </div>
@@ -316,7 +292,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">group_add</i>
              <!--  <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="username" name="username" type="text">
               <label for="password-again">联系人性别</label>
             </div>
           </div>
@@ -324,7 +300,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">contact_mail</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="cy_email" name="username" type="text">
               <label for="password-again">常用邮箱</label>
             </div>
           </div>
@@ -332,7 +308,7 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">contact_phone</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="cy_phone" name="username" type="text">
               <label for="password-again">常用手机</label>
             </div>
           </div>
@@ -340,13 +316,14 @@
             <div class="input-field col s12">
               <i class="material-icons prefix">vpn_key</i>
               <!-- <i class="mdi-action-lock-outline prefix"></i> -->
-              <input id="password-again" type="password">
+              <input id="username" name="username" type="text">
               <label for="password-again">手机验证码</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <a href="register.html" id="clik_qd" class="btn waves-effect waves-light col s12">确定</a>
+             <!--  <a href="register.html" id="clik_qd" class="btn waves-effect waves-light col s12">确定</a> -->
+             <a href="#" id="clik_qd" class="btn waves-effect waves-light col s12">确定</a>
             </div>
             <div class="input-field col s12">
             <!--   <p class="margin center medium-small sign-up">已经有了账号? <a href="index.html">登录</a></p> -->
@@ -411,97 +388,211 @@
     <!--materialize js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 
-    <script >
-   !function(window,document,$,undefined){
+    <script>
+    //      $('#clik_qd').on('click',function(){
+    //         var username = $('#username').val()
+    //          setCookie('result',str,365);
+    //         if(username.length<8){
+    //           $('#usertiger').text('公司名不能少于8位')
+    //           alert('123')
+    //         }else{
+    //            $('#usertiger').text('')
+    //         }
+    //         document.cookie = 'value' + username +';expires' + (1 * 3600 * 1000);
+    //         getVal();
+    //      })
+ 
+    //          $('#clik_qd').on('click',function(){
+    //         if(checkCookie()){
+    //             var str = getCookie('result');
+    //             var arr = str.split(',');
+                 
+    //             document.getElementById('t1').innerHTML = arr[0];
+    //             document.getElementById('t2').innerHTML = arr[1];
+    //         }
+    //     })
+    // function getVal(){
+    //     $('#div').html(document.cookie.split(';')[0].split('=')[1]);
+    // }
+    // getVal();
+    //        function setCookie(c_name,value,expiredays){
+    //         var exdate=new Date();
+    //         exdate.setDate(exdate.getDate()+expiredays);
+    //         document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+    //     }
 
-  var init = function(){
-    bindevent()
-  };
-
-  var bindevent = function(){
-    $("#clik_qd").on('click',onnewbtnclick);
-  }
-  // var donwfocus=function(){
-  //   $('#username,#email,#password,.password_again').focus(donwtxt);
-  // }
-  
-    var onnewbtnclick = function(){
-      var name=$('#username').val();
-      $.ajax({
-        type:"post",
-        dataType: "JSON",
-        url:"/supplierUserController/register",
-        Content-Type:"application/json"
-        data:{
-          supplier_user_name:name
-        },
-        success:function(data){
-            console.log(data)
-        } 
-      })
-
-    }
-    $(document).ready(init);
-
-}(window,document,jQuery);
-   
-
-
-
-
-
-
-
-
-
-
-    // $( document ).ready(function(){
-    	// $.ajax({
-    	// 	url: "http://192.168.88.39:8080/supplierUserController/showUserToJsonByName/sun",
-    	// 	type: "GET",
-    	// 	dataType: 'JSON',
-
-    	// 	success: function(){  
-    	// 		$.each(result, function(i, field){
-    	// 		if (i == "supplierUserName") {
-    	// 			$("#usename").text(field);
-    	// 		}
-    	// 		})
-    	// 	},
-    	// 	error: function(XMLHttpRequest, textStatus, errorThrown) { 
-    	// 		alert("Status: " + textStatus);
-    	// 		alert("Error: " + errorThrown); 
-    		     
-    	// }
-    	// 	 })
+    //     function getCookie(c_name){
+    //         if(document.cookie.length>0){
+    //             c_start=document.cookie.indexOf(c_name + "=");
+    //               if(c_start!=-1){ 
+    //                 c_start=c_start + c_name.length+1;
+    //                 c_end=document.cookie.indexOf(";",c_start);
+    //             if(c_end==-1) c_end=document.cookie.length;
+    //                 return unescape(document.cookie.substring(c_start,c_end));
+    //             } 
+    //           }
+    //         return "";
+    //     }
+        
+    //     function checkCookie(){
+    //         var username=getCookie('result')
+    //         if(username!=null && username!=""){
+    //           return true;
+    //         }
+    //         else{
+    //             return false;
+    //         }
+    //     }
 
 
+     
+
+// 重要看下
+ // $(function () {
+ //            if ($.cookie("user")) {
+ //                $("#username").val($.cookie("user"));
+ //            };
+
+ //            $("#btn").click(function () {
+ //                $.cookie("user", $("#username").val(), { expires: 7 });
+ //            });
+          
+ //        });
+
+    
     	// $deta{
     	// 	supplierUserName:$('#username').val()
     	// }
 // }
 
 
-    	// $.ajax({
-    	// 	url: "http://192.168.88.42:8080/supplierUserController/showUserToJsonByName/sun",
-    	// 	type: "GET",
-    	// 	dataType: 'JSONP',
-    	// 	success: function(result){
-    	// 		$.each(result, function(i, field){
-    	// 		if (i == "supplierUserName") {
-    	// 			$("#usename").text(field);
-    	// 		}
-
-    	// 	});
-    	// 	},
-    	// 	error:function(result){
-    	// 		$.each(result, function(i, field){
-    	// 		if (i == "supplierUserName") {
-    	// 			$("#usename").text(field);
-    	// 		}
-    	// });
-    	// 	}
-
+    	$.ajax({
+    		url: "http://192.168.88.35:8088/supplierUserController/showUserToJsonByName/sun",
+    		type: "GET",
+    		dataType: 'JSON',
+        data:{
+         companyName:$("#username").value
+         organizeCode:$("#user_jg").value
+         companyNature:$("#user_sw").value
+         city:$("#user_conplay").value
+         street: $("#user_adrees").value
+         corporateRepresentative:$("#user_conname").value
+         registeredCapital:$('#zc_money').value
+         establishDate:$('#again_data').value
+         expiryDate:$('#qx_data').value
+         businessScope:$('#jy_fw').value
+         bank:$('#kh_bank').value
+         account:$('#bank_naber').value
+         serviceType:$('#fw_kind').value
+         contactName:$('#people_name').value
+         email:$('#cy_email').value
+         commonMobile:$('#cy_phone').value
+        }
+    		success: function(result){
+    			$.each(result, function(i, field){
+    			if (i == "supplierUserName") {
+    				$("#username").text(field);
+    			}
+          if(i == "organizeCode"){
+             $("#user_jg").text(field)
+          }
+          if(i == "companyNature"){
+            $('#user_sw').text(field)
+          }
+          if(i == "city"){
+            $('#user_conplay').text(field)
+          }
+          if(i == "street"){
+             $("#user_adrees").text(field)
+          }
+          if(i == "corporateRepresentative"){
+            $("#user_conname").text(field)
+          }
+          if(i == "registeredCapital"){
+            $('#zc_money').text(field)
+          }
+          if(i == "establishDate"){
+            $('#again_data').text(field)
+          }
+          if(i == "expiryDate"){
+            $('#qx_data').text(field)
+          }
+          if(i == "businessScope"){
+            $('#jy_fw').text(field)
+          }
+          if(i == "bank"){
+            $('#kh_bank').text(field)
+          }
+          if(i == "account"){
+            $('#bank_naber').text(field)
+          }
+          if(i == "serviceType"){
+            $('#fw_kind').text(field)
+          }
+          if(i == "contactName"){
+            $('#people_name').text(field)
+          }
+          if(i == "email"){
+            $('#cy_email').text(field)
+          }
+          if(i == "commonMobile"){
+            $('#cy_phone').text(field)
+          }
+    		});
+    		},
+    		error:function(result){
+    			$.each(result, function(i, field){
+    			if (i == "supplierUserName") {
+            $("#username").text(field);
+          }
+          if(i == "organizeCode"){
+             $("#user_jg").text(field)
+          }
+          if(i == "companyNature"){
+            $('#user_sw').text(field)
+          }
+          if(i == "city"){
+            $('#user_conplay').text(field)
+          }
+          if(i == "street"){
+             $("#user_adrees").text(field)
+          }
+          if(i == "corporateRepresentative"){
+            $("#user_conname").text(field)
+          }
+          if(i == "registeredCapital"){
+            $('#zc_money').text(field)
+          }
+          if(i == "establishDate"){
+            $('#again_data').text(field)
+          }
+          if(i == "expiryDate"){
+            $('#qx_data').text(field)
+          }
+          if(i == "businessScope"){
+            $('#jy_fw').text(field)
+          }
+          if(i == "bank"){
+            $('#kh_bank').text(field)
+          }
+          if(i == "account"){
+            $('#bank_naber').text(field)
+          }
+          if(i == "serviceType"){
+            $('#fw_kind').text(field)
+          }
+          if(i == "contactName"){
+            $('#people_name').text(field)
+          }
+          if(i == "email"){
+            $('#cy_email').text(field)
+          }
+          if(i == "commonMobile"){
+            $('#cy_phone').text(field)
+          }
+    	});
+    		}
+})
     		    // 	$.getJSON("http://192.168.88.42:8080/supplierUserController/showUserToJsonByName/sun",function(result){
     // 		$.each(result, function(i, field){
     // 			if (i == "supplierUserName") {
